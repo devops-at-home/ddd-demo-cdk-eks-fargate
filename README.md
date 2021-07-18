@@ -2,6 +2,8 @@
 
 AWS CDK for a serverless EKS cluster using Fargate - demo for DDD Perth 2021
 
+## Architecture
+
 ## Requirements
 
 - NodeJS 14 installed
@@ -11,26 +13,28 @@ AWS CDK for a serverless EKS cluster using Fargate - demo for DDD Perth 2021
 
 For further information please see [Getting started with the AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html)
 
-## How to build and run tests
+## Commands
+
+### Build and run tests
 
 ```
 yarn install
 yarn build
 ```
 
-## How to update tests
+### Update tests
 
 ```
 yarn test -u
 ```
 
-## How to deploy
+### Deploy stack
 
 ```
 yarn deploy
 ```
 
-## How to destry
+### Destroy stack
 
 ```
 yarn destroy
