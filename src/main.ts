@@ -1,4 +1,5 @@
 import * as eks from '@aws-cdk/aws-eks';
+// import { InstanceType } from '@aws-cdk/aws-ec2';
 import { App, Construct, Stack, StackProps } from '@aws-cdk/core';
 import * as cdkeks from 'cdkeks';
 
@@ -6,6 +7,7 @@ export class MyStack extends Stack {
   constructor(scope: Construct, id: string, props: StackProps = {}) {
     super(scope, id, props);
 
+    // Create the cluster
     const cluster = new eks.FargateCluster(this, 'ddd-demo-cluster', {
       version: eks.KubernetesVersion.V1_20,
       defaultProfile: {
@@ -15,6 +17,18 @@ export class MyStack extends Stack {
       },
     });
 
+    // Examples
+    // cluster.vpc.vpcId;
+    // cluster.vpc.vpcCidrBlock;
+    // cluster.addNodegroupCapacity("NodeGroup", {})
+    // cluster.addAutoScalingGroupCapacity('AutoScalingGroup', {
+    //   instanceType: new InstanceType('m5.large'),
+    // });
+    // cluster.addManifest()
+    // cluster.addHelmChart()
+    // cluster.addCdk8sChart()
+
+    // Add the ALB controller
     new cdkeks.Platform(this, 'Platform', {
       cluster,
       addons: [new cdkeks.AwsLoadBalancerControllerAddon()],
