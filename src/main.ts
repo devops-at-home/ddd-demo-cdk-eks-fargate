@@ -1,5 +1,4 @@
 import * as eks from '@aws-cdk/aws-eks';
-// import { InstanceType } from '@aws-cdk/aws-ec2';
 import { App, Construct, Stack, StackProps } from '@aws-cdk/core';
 import * as cdkeks from 'cdkeks';
 
@@ -20,9 +19,8 @@ export class MyStack extends Stack {
     // Examples
     // cluster.vpc.vpcId;
     // cluster.vpc.vpcCidrBlock;
-    // cluster.addNodegroupCapacity("NodeGroup", {})
     // cluster.addAutoScalingGroupCapacity('AutoScalingGroup', {
-    //   instanceType: new InstanceType('m5.large'),
+    //   instanceType: new ec2.InstanceType('m5.large'),
     // });
     // cluster.addManifest()
     // cluster.addHelmChart()

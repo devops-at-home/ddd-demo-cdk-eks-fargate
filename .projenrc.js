@@ -1,6 +1,6 @@
 const { AwsCdkTypeScriptApp } = require('projen');
 const project = new AwsCdkTypeScriptApp({
-  cdkVersion: '1.114.0',
+  cdkVersion: '1.117.0',
   defaultReleaseBranch: 'main',
   name: 'ddd-demo-cdk-eks-fargate',
   cdkDependencies: ['@aws-cdk/aws-eks'],
