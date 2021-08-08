@@ -8,7 +8,7 @@ export class MyStack extends Stack {
 
     // Create the cluster
     const cluster = new eks.FargateCluster(this, 'ddd-demo-cluster', {
-      version: eks.KubernetesVersion.V1_20,
+      version: eks.KubernetesVersion.V1_21,
     });
 
     // Examples
