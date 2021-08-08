@@ -9,11 +9,6 @@ export class MyStack extends Stack {
     // Create the cluster
     const cluster = new eks.FargateCluster(this, 'ddd-demo-cluster', {
       version: eks.KubernetesVersion.V1_20,
-      defaultProfile: {
-        selectors: ['default', 'kube-system', 'demo'].map((ns) => {
-          return { namespace: ns };
-        }),
-      },
     });
 
     // Examples
